@@ -4,23 +4,31 @@ A lightweight Python library that extends Selenium with secure and resilient ele
 ---
 
 ## Features
-- 🔒 **Secure wrappers** around common Selenium actions (click, send_keys, select, get text/attributes).
-- ⏱ **Automatic retries and timeouts** for more reliable automation in unstable environments.
-- 🧩 **Consistent API design** – every helper follows the same pattern, making it predictable and easy to use.
-- 🛠 **Supports both `WebDriver` and `WebElement`** as entry points via a shared context resolver.
-- 🧾 **Debug utilities** to quickly inspect element texts.
+- **Secure wrappers** around common Selenium actions (click, send_keys, select, get text/attributes).
+- **Automatic retries and timeouts** for more reliable automation in unstable environments.
+- **Consistent API design** – every helper follows the same pattern, making it predictable and easy to use.
+- **Supports both `WebDriver` and `WebElement`** as entry points via a shared context resolver.
+- **Debug utilities** to quickly inspect element texts.
 ---
 ## Installation
 1. This library is just a helper script. Copy `secure_operate.py` into your project and import it:
    
 ```python
 from secure_operate import (
+    secure_select_by_visible_text,
     secure_click,
     secure_send_keys,
+    secure_js_click,
+    secure_get_value,
+    secure_send_keyboard,
     secure_get_text,
-    secure_get_attribute,
+    secure_presence_wait,
+    secure_js_get_text,
     secure_find_all_elements,
+    secure_get_attribute,
+    debug_element_texts,
 )
+
 ```
 
 2. Install the required dependencies using `requirements.txt`:
